@@ -505,3 +505,83 @@ button {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* --- Mobile Optimization (Max Width 768px) --- */
+@media (max-width: 768px) {
+    /* 1. Base Font Adjustments for Better Readability */
+    html {
+        font-size: 16px; /* Base for rem calculation */
+    }
+
+    /* 2. Optimized Blessing Words & Body Text (14-16px range) */
+    .scroll-text, 
+    .tutorial-hint, 
+    .highscore-small,
+    p {
+        font-size: 1rem; /* 16px */
+        line-height: 1.6; /* 1.6x line height */
+        -webkit-font-smoothing: antialiased; /* Sharp rendering */
+        text-shadow: 0 1px 2px rgba(0,0,0,0.8); /* Better contrast */
+    }
+
+    /* 3. Title Scaling (Prevent Overwhelming Size) */
+    h1 {
+        font-size: 3rem; /* Reduced from 5rem */
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reduced from 2.5rem */
+        margin-bottom: 2rem;
+    }
+
+    /* 4. Banner Text Optimization */
+    #banner-text {
+        font-size: 2rem; /* Reduced from 4rem for mobile fit */
+        letter-spacing: 5px;
+        text-shadow: 0 0 10px var(--primary-red);
+    }
+    
+    .banner-content {
+        padding: 10px 20px; /* Tighter padding */
+    }
+
+    /* 5. Button Adjustments */
+    .big-btn {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .secondary-btn {
+        font-size: 0.9rem; /* ~14.4px */
+        padding: 0.6rem 1.5rem;
+    }
+
+    /* 6. Modal & Overlay Adjustments */
+    .modal-content {
+        padding: 20px;
+        width: 90%;
+        max-width: 90%;
+    }
+
+    #newyear-overlay h1 {
+        font-size: 3.5rem;
+    }
+    
+    #newyear-overlay h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* 7. Game Over Screen */
+    .result-box {
+        padding: 1.5rem;
+        min-width: 80%;
+    }
+    
+    .score-display {
+        font-size: 3rem;
+    }
+}
