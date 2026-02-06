@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <title>2026 步步高升 | Skyward Jump</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Background Effects Layer -->
+        <div id="bg-effects">
+            <div class="snow-layer"></div>
+            <div class="lantern-decoration left"></div>
+            <div class="lantern-decoration right"></div>
+            <div class="paper-cut-pattern"></div>
+        </div>
+
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- UI Overlay -->
+        <div id="ui-layer">
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen active glass-panel">
+                <div class="title-area">
+                    <h1 class="glitch-text" data-text="2026">2026</h1>
+                    <h2>步步高升</h2>
+                </div>
+                <div class="menu-container">
+                    <button id="start-btn" class="big-btn">开始挑战</button>
+                    <button id="help-btn" class="secondary-btn">游戏说明</button>
+                    <p class="tutorial-hint">左右滑动控制跳跃</p>
+                </div>
+            </div>
+
+            <!-- Help Modal -->
+            <div id="help-modal" class="screen hidden glass-panel">
+                <div class="modal-content">
+                    <h2 class="neon-text">新春送福指南</h2>
+                    <div class="scroll-text">
+                        <p><strong>🐴 寓意：</strong></p>
+                        <p>化身“福马”，步步高升，将新年的福气洒满人间。</p>
+                        <br>
+                        <p><strong>🎮 操作：</strong></p>
+                        <p>🖱️ 鼠标/👆 手指左右滑动控制方向</p>
+                        <p>☁️ 踩踏祥云不断向上跳跃</p>
+                        <br>
+                        <p><strong>🏆 规则：</strong></p>
+                        <p>💰 收集金币 +100分</p>
+                        <p>🚀 拾取火箭 极速冲刺</p>
+                        <p>⚠️ 掉落云端 游戏结束</p>
+                    </div>
+                    <button id="close-help-btn" class="big-btn">我已知晓</button>
+                </div>
+            </div>
+
+            <!-- HUD -->
+            <div id="hud" class="screen hidden">
+                <div class="score-container">
+                    <div class="score-display">0</div>
+                    <div class="highscore-small hidden">历史最佳: <span id="hud-highscore">0</span></div>
+                </div>
+                <div id="endless-badge" class="hidden">∞ 无尽模式</div>
+            </div>
+
+            <!-- Easter Egg Banner -->
+            <div id="easter-egg-banner" class="hidden">
+                <div class="banner-content">
+                    <span id="banner-text">新年快乐</span>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="screen hidden glass-panel">
+                <h2 class="neon-text">新春大吉</h2>
+                <div class="result-box">
+                    <p>本次得分</p>
+                    <h3 id="final-score" class="neon-num">0</h3>
+                    <p class="best-score">历史最佳: <span id="best-score">0</span></p>
+                </div>
+                <div class="btn-group">
+                    <button id="retry-btn" class="big-btn">再来一次</button>
+                    <button id="share-btn" class="secondary-btn">分享福气</button>
+                </div>
+            </div>
+            <!-- New Year Fullscreen Overlay -->
+            <div id="newyear-overlay" class="screen hidden glass-panel" style="z-index: 200;">
+                <div class="ny-content">
+                    <h1 class="neon-text" id="ny-title">新年快乐</h1>
+                    <h2 class="neon-text" id="ny-sub">恭喜发财</h2>
+                    <div class="btn-group-vertical" style="margin-top: 2rem;">
+                        <button id="ny-continue-btn" class="big-btn glow-gold">继续挑战 (开启无尽模式)</button>
+                        <button id="ny-menu-btn" class="secondary-btn">见好就收 (返回菜单)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/assets.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
