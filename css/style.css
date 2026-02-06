@@ -508,80 +508,88 @@ button {
 
 /* --- Mobile Optimization (Max Width 768px) --- */
 @media (max-width: 768px) {
-    /* 1. Base Font Adjustments for Better Readability */
+    /* 1. Base Font Adjustments (Systematic Scaling) */
     html {
-        font-size: 16px; /* Base for rem calculation */
+        font-size: 14px; /* Reduced from 16px (12.5% reduction) to scale all rem units */
     }
 
-    /* 2. Optimized Blessing Words & Body Text (14-16px range) */
+    /* 2. Optimized Blessing Words & Body Text */
     .scroll-text, 
     .tutorial-hint, 
     .highscore-small,
     p {
-        font-size: 1rem; /* 16px */
-        line-height: 1.6; /* 1.6x line height */
-        -webkit-font-smoothing: antialiased; /* Sharp rendering */
-        text-shadow: 0 1px 2px rgba(0,0,0,0.8); /* Better contrast */
+        font-size: 1.1rem; /* ~15.4px (Comfortable reading size) */
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.8);
     }
 
-    /* 3. Title Scaling (Prevent Overwhelming Size) */
+    /* 3. Title Scaling (Hierarchy Maintenance) */
     h1 {
-        font-size: 3rem; /* Reduced from 5rem */
+        font-size: 2.5rem; /* ~35px (Reduced from 5rem desktop) */
         letter-spacing: 2px;
         margin-bottom: 0.5rem;
     }
 
     h2 {
-        font-size: 1.5rem; /* Reduced from 2.5rem */
-        margin-bottom: 2rem;
+        font-size: 1.5rem; /* ~21px (Reduced from 2.5rem desktop) */
+        margin-bottom: 1.5rem;
     }
 
     /* 4. Banner Text Optimization */
     #banner-text {
-        font-size: 2rem; /* Reduced from 4rem for mobile fit */
-        letter-spacing: 5px;
+        font-size: 2rem; /* ~28px (Reduced from 4rem) */
+        letter-spacing: 3px;
         text-shadow: 0 0 10px var(--primary-red);
     }
     
     .banner-content {
-        padding: 10px 20px; /* Tighter padding */
+        padding: 10px 15px;
     }
 
-    /* 5. Button Adjustments */
+    /* 5. Button Adjustments (Touch Targets) */
     .big-btn {
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
-        width: 80%;
-        max-width: 300px;
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem; /* ~16.8px */
+        width: 85%;
+        max-width: 280px;
+        margin: 8px;
     }
 
     .secondary-btn {
-        font-size: 0.9rem; /* ~14.4px */
+        font-size: 1rem; /* 14px */
         padding: 0.6rem 1.5rem;
+        margin: 8px;
     }
 
     /* 6. Modal & Overlay Adjustments */
     .modal-content {
-        padding: 20px;
+        padding: 15px;
         width: 90%;
         max-width: 90%;
     }
 
     #newyear-overlay h1 {
-        font-size: 3.5rem;
+        font-size: 3rem; /* ~42px */
     }
     
     #newyear-overlay h2 {
-        font-size: 1.8rem;
+        font-size: 1.5rem; /* ~21px */
     }
     
     /* 7. Game Over Screen */
     .result-box {
-        padding: 1.5rem;
-        min-width: 80%;
+        padding: 1.2rem;
+        min-width: 85%;
+        margin-bottom: 1.5rem;
     }
     
     .score-display {
-        font-size: 3rem;
+        font-size: 2.5rem; /* ~35px */
+    }
+    
+    /* Ensure minimum font size >= 12px */
+    .highscore-small {
+        font-size: 1rem; /* 14px */
     }
 }
