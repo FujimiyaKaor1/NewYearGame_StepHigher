@@ -1,7 +1,7 @@
 {
   "name": "skyward-jump-2026",
   "version": "1.0.0",
-  "description": "2026 New Year Game - Skyward Jump",
+  "description": "2026 New Year Game - StepHigher",
   "main": "electron-main.js",
   "scripts": {
     "start": "electron .",

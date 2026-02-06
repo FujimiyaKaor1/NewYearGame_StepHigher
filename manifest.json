@@ -1,6 +1,6 @@
 {
-    "name": "Skyward Jump 2026",
-    "short_name": "Skyward2026",
+    "name": "StepHigher",
+    "short_name": "StepHigher",
     "description": "2026 新年步步高升 - 跨平台跳跃游戏",
     "start_url": "./index.html",
     "display": "standalone",
