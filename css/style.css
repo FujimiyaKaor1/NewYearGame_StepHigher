@@ -448,7 +448,7 @@ button {
 }
 
 #banner-text {
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--primary-gold);
     font-weight: bold;
     text-shadow: 0 0 20px var(--primary-red);
@@ -538,7 +538,7 @@ button {
 
     /* 4. Banner Text Optimization */
     #banner-text {
-        font-size: 2rem; /* ~28px (Reduced from 4rem) */
+        font-size: 1.5rem; /* ~21px (Reduced from 2rem) */
         letter-spacing: 3px;
         text-shadow: 0 0 10px var(--primary-red);
     }
